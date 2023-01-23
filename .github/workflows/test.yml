@@ -10,5 +10,5 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2.3.4
       - name: install Dedalus 3
-        run:  source installDedalus.sh
+        run:  source installDedalus3.sh
 
