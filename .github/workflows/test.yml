@@ -10,7 +10,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2.3.4
       - name: which virtualenv
-        run: which virtualenv
+        run: sudo apt install python3-virtualenv
 #       - name: install Dedalus 3
 #         run:  source installDedalus3.sh
 
