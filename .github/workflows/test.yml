@@ -10,7 +10,14 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2.3.4
       - name: install virtualenv and activate
-        run: sudo apt install python3-virtualenv; source python_env/bin/activate
-#       - name: install Dedalus 3
-#         run:  source installDedalus3.sh
+        run:  sudo apt install python3-virtualenv; source python_env/bin/activate
+      - name: pip install --upgrade pip
+        run:  pip install --upgrade pip
+      - name: pip install --no-index cython xarray
+        run:  pip install --no-index cython xarray
+      - name: pip install --no-index pytest pytest-cov pytest-benchmar
+        run:  pip install --no-index pytest pytest-cov pytest-benchmar
+      - name: pip install pytest-parallel
+        run:  pip install pytest-parallel
+        
 
