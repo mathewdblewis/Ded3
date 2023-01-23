@@ -10,7 +10,11 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2.3.4
       - name: install virtualenv and activate
-        run:  sudo apt install python3-virtualenv; source python_env/bin/activate
+        run:  sudo apt install python3-virtualenv
+      - name: virtualenv --no-download python_env
+        run:  virtualenv --no-download python_env
+      - name: source python_env/bin/activate
+        run:  source python_env/bin/activate
       - name: pip install --upgrade pip
         run:  pip install --upgrade pip
       - name: pip install --no-index cython xarray
